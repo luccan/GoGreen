@@ -5,6 +5,7 @@ Go Green
     Required Specs:
         * SQL Server 2016 (for localdb) with instance name (localdb)\MSSQLLocalDB
         * Windows OS x64
+        * Google Chrome
 
     Deployment:
         * Unzip files
