@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Build Notes";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    Required Specs:<br />
+    <ol>
+        <li>SQL Server 2016 (for localdb) with instance name (localdb)\MSSQLLocalDB</li>
+        <li>Windows OS x64</li>
+    </ol>
+
+    Deployment:
+    <ol>
+        <li>Unzip files</li>
+        <li>Run deployRelease.ps1 in admin mode.</li>
+    </ol>
+
+    GET Methods:
+    <ol>
+        <li>http://localhost:5000/Vegetable/Index?isApi=True</li>
+        <li>http://localhost:5000/Vegetable/Index?id=1&search=isApi=True</li>
+        <li>http://localhost:5000/Vegetable/Index?id=&search=carr&isApi=True</li>
+        <li>http://localhost:5000/Vegetable/Details?id=1&isApi=True</li>
+    </ol>
+
+    POST Methods:
+    <ol>
+        <li>http://localhost:5000/Vegetable/Create?isApi=True (Expecting Name, Price in request Body)</li>
+        <li>http://localhost:5000/Vegetable/Edit?isApi=True (Expecting Id, Name, Price in request Body)</li>
+        <li>http://localhost:5000/Vegetable/Delete?isApi=True (Expecting Id in request Body)</li>
+    </ol>
+</p>

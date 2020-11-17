@@ -1,0 +1,27 @@
+USE [master]
+IF EXISTS(SELECT name FROM master.sys.databases where name = 'GoGreen')
+BEGIN    
+    ALTER DATABASE GoGreen SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE GoGreen
+END
+
+CREATE DATABASE GoGreen
+/****** Object:  Table [dbo].[Vegetable] ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [GoGreen].[dbo].[Vegetable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](200) NOT NULL,
+	[Price] [decimal](19, 2) NOT NULL,
+    CONSTRAINT [PK_Vegetable] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
